@@ -28,7 +28,7 @@ exports.index = function (req, res, error) {
 
                                 res.render('index',
                                     {
-                                        layout: 'main',
+                                        layout: 'user',
                                         products: products,
                                         pictures: pictures,
                                         posts: posts,
@@ -41,11 +41,10 @@ exports.index = function (req, res, error) {
                             })
 
                     })
-                // res.render('index', {layout: 'main', pictures:pictures});
             })
             .catch(function (error) {
 
-                res.render('index', { layout: 'main', error: error });
+                res.render('index', { layout: 'user', error: error });
             })
 
 

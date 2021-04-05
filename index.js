@@ -32,11 +32,13 @@ app.use(express.static('public'))
 app.use(web_routes);
 
 //view engine here
-app.engine('handlebars', exphbs({
-    defaultLayout: 'main',
-    // extname: 'html'
+app.engine('.hbs', exphbs({
+    defaultLayout: 'user',
+    extname: '.hbs'
 }));
-app.set('view engine', 'handlebars');
+app.set('view engine', '.hbs');
+
+
 
 //Now tisten to this port 
 if (app.listen(process.env.PORT || 5000)) {
