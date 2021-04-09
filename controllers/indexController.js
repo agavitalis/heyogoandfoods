@@ -69,6 +69,15 @@ exports.contact = function (req, res, error) {
     }
 }
 
+exports.services = function (req, res, error) {
+
+    if (req.method == "GET") {
+
+        res.render('services');
+
+    }
+}
+
 exports.gallery = function (req, res, error) {
 
     if (req.method == "GET") {
@@ -158,7 +167,6 @@ exports.customer_contact = function (req, res, error) {
 
     }
 }
-
 
 exports.blog_readmore = function (req, res, error) {
 

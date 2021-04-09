@@ -47,6 +47,7 @@ router.use('/gallery', indexController.gallery)
 router.use('/products', indexController.products)
 router.use('/contact', indexController.contact)
 router.use('/about', indexController.about)
+router.use('/services', indexController.services)
 router.use('/customer_contact', indexController.customer_contact)
 
 router.use('/', indexController.index)
