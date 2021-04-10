@@ -69,6 +69,15 @@ exports.contact = function (req, res, error) {
     }
 }
 
+exports.menu = function (req, res, error) {
+
+    if (req.method == "GET") {
+
+        res.render('menu');
+
+    }
+}
+
 exports.services = function (req, res, error) {
 
     if (req.method == "GET") {
@@ -86,11 +95,11 @@ exports.gallery = function (req, res, error) {
             .then(function (pictures) {
                 //catch any response on the url
                 let response = req.query.response
-                res.render('gallery', { layout: 'main', pictures: pictures.map(picture => picture.toJSON()), response });
+                res.render('gallery', { pictures: pictures.map(picture => picture.toJSON()), response });
             })
             .catch(function (error) {
 
-                res.render('gallery', { layout: 'main', error: error });
+                res.render('gallery', { error: error });
             })
 
     }

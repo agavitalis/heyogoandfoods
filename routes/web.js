@@ -44,6 +44,7 @@ router.use('/admin/createBlogPost',Upload.upload.single('cover_image'), blogCont
 router.use('/blog/:post_id', indexController.blog_readmore)
 router.use('/blog', indexController.blog)
 router.use('/gallery', indexController.gallery)
+router.use('/menu', indexController.menu)
 router.use('/products', indexController.products)
 router.use('/contact', indexController.contact)
 router.use('/about', indexController.about)
