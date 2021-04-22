@@ -34,7 +34,7 @@ app.get('/.well-known/pki-validation/810E27D55D0E37C25303F0185AB198DE.txt', func
     // comodoca.com<br>
     // 9d910e3d7468fad`
     // )
-    res.download("810E27D55D0E37C25303F0185AB198DE.txt");
+    res.download(".well-known/pki-validation/810E27D55D0E37C25303F0185AB198DE.txt");
 })
 //Routes imported here
 app.use(web_routes);
