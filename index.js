@@ -29,11 +29,12 @@ db_connection.connection_db()
 app.use(express.static('public'))
 
 app.get('/.well-known/pki-validation/810E27D55D0E37C25303F0185AB198DE.txt', function(req, res) {
-    res.send(`
-    48C72EC27289727142C9E2979C0E5718C23D07022CBACD5ECDA54CD19BA391E6<br>
-    comodoca.com<br>
-    9d910e3d7468fad`
-    )
+    // res.send(`
+    // 48C72EC27289727142C9E2979C0E5718C23D07022CBACD5ECDA54CD19BA391E6<br>
+    // comodoca.com<br>
+    // 9d910e3d7468fad`
+    // )
+    res.download("810E27D55D0E37C25303F0185AB198DE.txt");
 })
 //Routes imported here
 app.use(web_routes);
